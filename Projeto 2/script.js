@@ -3,11 +3,28 @@ let userPosition=null
 let markers=[]
 
 const locais=[
- {nome:"Ecoponto Zona 7",endereco:"Av. Colombo, 1234",lat:-23.4201,lng:-51.9331,categoria:"eletronicos",imagem:"https://i.imgur.com/Eco1.jpg"},
- {nome:"Ecoponto Jardim Alvorada",endereco:"Rua das Flores, 567",lat:-23.4252,lng:-51.9302,categoria:"moveis",imagem:"https://i.imgur.com/Eco2.jpg"},
- {nome:"Coleta Seletiva Central",endereco:"Av. Brasil, 789",lat:-23.4183,lng:-51.9287,categoria:"plastico",imagem:"https://i.imgur.com/Eco3.jpg"},
- {nome:"Descarte de Pilhas Maringá",endereco:"Rua Verde, 101",lat:-23.4160,lng:-51.9350,categoria:"pilhas",imagem:"https://i.imgur.com/Eco4.jpg"},
- {nome:"Ponto de Reciclagem Mandacaru",endereco:"Rua Mandacaru, 333",lat:-23.4198,lng:-51.9452,categoria:"vidro",imagem:"https://i.imgur.com/Eco5.jpg"}
+ {nome:"Paço Municipal",categoria:"eletronicos",lat:-23.4206,lng:-51.933,endereco:"Av. XV de Novembro, 701",imagem:"https://i.ibb.co/wHvmRSj/35138085402-1fb5d76b06-h.jpghttps://i.imgur.com/eco1.jpg"},
+ {nome:"Supermercados Cidade Canção",categoria:"eletronicos",lat:-23.426,lng:-51.930,endereco:"Av. Brasil, 7225",imagem:"https://i.ibb.co/TMv36Djt/Screenshot-1.png"},
+ {nome:"SESI",categoria:"eletronicos",lat:-23.427,lng:-51.918,endereco:"Rua Antonio Carniel, 499",imagem:"https://i.ibb.co/7tGDW8YQ/Sesi.jpg"},
+ {nome:"Tiro de Guerra de Maringá",categoria:"eletronicos",lat:-23.398,lng:-51.934,endereco:"Av. Mandacaru, 730",imagem:"https://i.ibb.co/mFGyQj9r/Tiro-de-guerra.webp"},
+ {nome:"4º BPM",categoria:"eletronicos",lat:-23.411,lng:-51.931,endereco:"Rua Mitsuzo Taguchi, 99",imagem:"https://i.ibb.co/ns4qPdLN/4-batalhao.jpg"},
+ {nome:"Câmara Municipal",categoria:"eletronicos",lat:-23.428,lng:-51.936,endereco:"Av. Papa João XXIII, 239",imagem:"hhttps://i.ibb.co/QvSfz0p5/Camara-municipal.webp"},
+ {nome:"Coopercanção",categoria:"eletronicos",lat:-23.437,lng:-51.930,endereco:"Rua P. Gertrude Heck Fritzen, 5769",imagem:"https://i.imgur.com/eco7.jpg"},
+ {nome:"Faculdades Maringá",categoria:"eletronicos",lat:-23.435,lng:-51.937,endereco:"Av. Prudente de Morais, 815",imagem:"https://i.ibb.co/SX4PF1MS/Faculdade-maringa.jpg"},
+ {nome:"UNIFAMMA",categoria:"eletronicos",lat:-23.450,lng:-51.930,endereco:"Av. Horacio Racanello Filho, 5000",imagem:"https://i.ibb.co/wNdHqRj3/unifama.jpg"},
+
+ {nome:"Paróquia Menino Jesus de Praga",categoria:"vidros",lat:-23.430,lng:-51.940,endereco:"Rua Monsenhor Kimura, 31",imagem:"https://i.ibb.co/9Mymmkf/paroquia-menino.jpg"},
+ {nome:"Paróquia Cristo Ressuscitado",categoria:"vidros",lat:-23.431,lng:-51.925,endereco:"Av. Rio Branco, 1000",imagem:"https://i.ibb.co/qLQYWb01/missa-de-dedicacao-igreja-cristo-ressuscitado-sera-dia-18-de-dezembro-12-12-2019.jpg"},
+ {nome:"Coopervidros",categoria:"vidros",lat:-23.500,lng:-51.950,endereco:"Estrada São Luiz, 2119, Gleba Pinguim",imagem:"https://i.imgur.com/vidro3.jpg"},
+
+ {nome:"CooperPalmeiras",categoria:"reciclaveis",lat:-23.410,lng:-51.950,endereco:"Rodovia PR 317, 200",imagem:"https://i.imgur.com/rec1.jpg"},
+ {nome:"CooperCicla",categoria:"reciclaveis",lat:-23.420,lng:-51.945,endereco:"Avenida Guairá, 184",imagem:"https://i.imgur.com/rec2.jpg"},
+ {nome:"CooperNorte",categoria:"reciclaveis",lat:-23.430,lng:-51.950,endereco:"Rodovia PR 317, 200",imagem:"https://i.imgur.com/rec3.jpg"},
+ {nome:"CooperAmbiental",categoria:"reciclaveis",lat:-23.440,lng:-51.940,endereco:"Rua Izaura Gambá Vitorino, 345",imagem:"https://i.imgur.com/rec4.jpg"},
+ {nome:"CooperMaringa",categoria:"reciclaveis",lat:-23.450,lng:-51.950,endereco:"Rodovia PR 317, 200",imagem:"https://i.imgur.com/rec5.jpg"},
+
+ {nome:"Secretaria de Meio Ambiente",categoria:"pilhas",lat:-23.425,lng:-51.920,endereco:"Av. Cerro Azul, 544",imagem:"https://i.ibb.co/Xrb2wByD/secretaria.jpg"},
+ {nome:"Atacadão Maringá",categoria:"pilhas",lat:-23.415,lng:-51.915,endereco:"Rua Fernão Dias, 300",imagem:"https://i.ibb.co/MxxbSsCq/atacadao.jpg"}
 ]
 
 function initMap(){
