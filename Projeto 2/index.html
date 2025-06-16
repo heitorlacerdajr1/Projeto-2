@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descarte Correto - Maringá</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="banner.png" alt="Descarte Correto" class="banner">
+            <h1>Descarte Correto</h1>
+            <p>Facilitando o descarte de resíduos em Maringá - PR</p>
+        </div>
+    </header>
+
+    <section class="filtros">
+        <button onclick="filtrarCategoria('todos')" class="ativo">Todos</button>
+        <button onclick="filtrarCategoria('reciclaveis')">♻️ Recicláveis</button>
+        <button onclick="filtrarCategoria('eletronicos')">💻 Sucatas Eletrônicas</button>
+        <button onclick="filtrarCategoria('vidros')">🪟 Vidros</button>
+        <button onclick="filtrarCategoria('pilhas')">🔋 Pilhas e Baterias</button>
+    </section>
+
+    <div id="map"></div>
+
+    <footer>
+        <p>&copy; 2025 - Projeto desenvolvido por Felipe Correa, Fernando Alexandre da Silva e Heitor Lacerda</p>
+    </footer>
+
+    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCAuyIzAo-ic13bM10e5Wad4AWbpWfVRDE&callback=initMap"></script>
+</body>
+</html>
